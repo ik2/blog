@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title</title>
+  </head>
+  <body>
+    <h1>CS253 Blog</h1>
+
+    <div id="content">
+    {% block content %}
+    {% endblock %}
+    </div>
+
+  </body>
+</html>
