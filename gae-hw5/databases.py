@@ -20,4 +20,12 @@ class Post(db.Model):
         self.content = re.sub(r"[\r\n]+(?=.+)", "</p><p>", self.content)
         return self.content
 
+    def as_dict(self):
+        time_fmt = '%c'
+        d = {'subject': self.subject,
+             'content': self.content,
+             'created': self.created.strftime(time_fmt),
+            }
+        return d
+
 
